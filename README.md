@@ -38,3 +38,8 @@ as tags que "cassem com o seletor.
 Regras criadas com o seletor do tipo classe, são mais versáteis, ou seja, você desenvolvedor(a) determine onde aplicar a classe e sua formatação.
 
 classes podem ser reutilizadas na mesma página e combinadas com outras classes.
+
+#### ID (Identificador)
+
+Regras criadas com seletor do tipo id, também são versáteis, ou seja, voc~e desenvolvedor(a) determina onde aplicar o id e sua formatação. **ATENÇÃO!** você não pode reaproveitar os IDs, ou seja, seletor ID deve ser usado SOMENTE PARA UM ELEMENTO.
+
