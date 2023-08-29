@@ -70,3 +70,6 @@ figure {
 }
 
 img { max-width: 100%; }
+
+/* seletor descedente */
+p a { color: red; }
