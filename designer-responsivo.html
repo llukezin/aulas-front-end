@@ -1,16 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    <h1>Desing Responsivo (ou responsividade)</h1>
-    <hr>
-    <p>conjunto de tecnicas de desenvolvimento
-    front-end visando a construção de sites que funcionem corretamente em dispositivos com telas de tamanhos variados. </p>
 
-    <p>Existem 2 abordagem de desenvolvimento Responsivo: <b>Mobile first</b> e <b>Desktop first</b>. </p>
+    <style>
+        /* etapa 01: regras de uso geral, ou seja, 
+     regras que vão definir estilos como um todo, não 
+     importando muito o tamanho de tela ou tipo de dispositivo. */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI';
+            background-color: lightblue;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        hr {
+            border: none;
+            height: 3px;
+            background-color: darkblue;
+        }
+
+        b {
+            background-color: white;
+            padding: 2px;
+            border-radius: 4px;
+        }
+
+        /* etapa 02: regras de uso condicional, ou seja,
+     regars que serão aplicadas de acordo com determinadas situações (exemplo: regras que somente funcionarão
+     se o site estiver em uma tela maior que 1000px)
+     
+     estas regras especiais/cndicionais são conhecidas como "media queries".*/
+        @media screen and (min-width: 550px) {
+            body {
+                background-color: lightgreen;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            hr {
+                width: 30%;
+            }
+        }
+
+        /*  exercicio (aqui mesmo!)
+     1) Faça uma regra condicional para telas
+    com tamanho maior ou igual a 720px em que as
+    seguintes alterações aconteçam:
+    - A div exemplo deve ter largura de 75% e ficar no meio.
+    - Os negritos devem ter outra cor de fundo
+    - O tamanho dos parágrafos deve ser de 18px 
+    2) Faça mais uma regra condicional para telas de pelo menos 895px com as seguintes alterações:
+    - O h1 deve receber um plano de fundo com gradiente de cores
+    - A div exemplo deve receber um plano de fundo com qualquer cor e com um pouco de transparência (na cor).
+*/
+        @media screen and (min-width: 720px) {
+            .exemplo {
+                width: 75%;
+                margin: auto;
+            }
+
+            b {
+                background-color: red;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="exemplo">
+        <h1>Desing Responsivo (ou responsividade)</h1>
+        <hr>
+        <p>conjunto de tecnicas de desenvolvimento
+            front-end visando a construção de sites que funcionem corretamente em dispositivos com telas de tamanhos
+            variados. </p>
+
+        <p>Existem 2 abordagem de desenvolvimento Responsivo: <b>Mobile first</b> e <b>Desktop first</b>. </p>
+        <p>A mais usada é a <b>Mobile first</b></p>
+    </div>
 </body>
+
 </html>
