@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+       /* Alterando o Box Model para TODOS os elementos a página (por isso usamos o seletor asteritico) */
+       * { box-sizing: border-box;}
+
+       body { font-family: 'Segoe UI', Tahoma, }
+
+       img { max-width: 100%; }
+
+       article {
+           padding: 8px;
+           border: solid 1px;
+           width: 30%;
+       }
+
+       article:first-child {background: yellow;}
+       article:nth-child(2) {background: orange;}
+        article:last-child {background: purple}
+       
+       .cards {
+        display: flex;
+         /* Atenção ao usar direções diferentes do Flex pois os eixos (horizontal/vertical)
+         vão mudar o comportamento das propiedades abaixo. O valor 
+         padrão é row (linha/horizontal) */
+         flex-direction: row;
+
+        justify-content: space-around;
+        align-items: center;
+
+        width: 80%;
+        height: 400px;
+
+        margin: auto;
+        /* gap: 12px */
+        background-color: aquamarine;
+       }
+
+    </style>
+</head>
+<body>
+    <h1>Flexbox</h1>
+    <hr>
+    <p>Flexblox é um mecanismo CSS que permite aplicar facilmente recursos de alinhamento, espaçamento e distribuição de elementos no HTML. muito útoil na elaboração de layouts.
+    </p>
+
+<div class="cards">
+    <article>
+
+        <img src="imagens/mini-apple.jpg" alt="logo apple">
+
+        <h2>Apple</h2>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, nisi</p>
+
+    </article>
+
+ 
+
+    <article>
+
+        <img src="imagens/mini-ibm.jpg" alt="logo IMB">
+
+        <h2>IBM</h2>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, nisi</p>
+
+    </article>
+
+ 
+
+    <article>
+
+        <img src="imagens/mini-microsoft.jpg" alt="logo MICROSOFT">
+
+        <h2>MICROSOFT</h2>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, nisi</p>
+
+    </article>
+</div>
+
+</body>
+</html>
