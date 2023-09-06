@@ -7,6 +7,95 @@
     <title>Layout responsivo</title>
 
     <style>
+       /*  Regras de uso geral */
+       * {box-sizing: border-box; }
+
+       body {
+        font-family: verdana;
+        background-color:aquamarine;
+       }
+
+      .container {
+        background-color: whitesmoke;
+        box-shadow: black 0 0 5px;
+        padding: 5px;
+      }
+
+      h1, h2, p {
+        margin: 0;
+        padding: 0;
+      }
+      /* o primeiro valor pra cima e pra baixo, segundo para laterais */
+      p {padding: 5px 0;}
+
+      h1 {background-color: lightsalmon;}
+    
+      nav {background-color: lightgoldenrodyellow;}
+
+      article {padding: 8px;}
+
+      #colunaA { background-color: brown;}
+      #colunaB { background-color:  chartreuse;}
+      #colunaC { background-color:  crimson;}
+
+      footer {
+        background-color: green;
+        height: 100px;
+      }
+      /* Regras de uso condicionais (Media Queries) */
+      @media screen and (min-width: 525px) {
+        header {
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        
+        h1 { width: 40%; }
+        nav { width: 60%;
+              display: flex;
+              justify-content: space-evenly;
+              align-items: center;
+        }
+      }
+
+      @media screen and (min-width: 770px) {
+        #colunaA { width: 70%;}
+        #colunaB { width: 30%;}
+        #colunaC { width: 100%;}
+        
+        main {
+            display: flex;
+            
+            /*  flex-wrap quando habilitado faz com que os elementos sejam "quebrados" para a linha de baixo caso não haja espaço*/
+            
+            flex-wrap: wrap;
+
+        }
+      }
+      
+      @media screen and (min-width: 1080px) {
+        .container {
+            margin: auto;
+            max-width: 1060px;
+
+        }
+
+        header {height: 100px;}
+
+           #colunaA, #colunaB, #colunaC {width: 33%;}
+           
+           /*Dseative o flex-wrap se voc~e precsa que realmente as colunas se mantenham lado a lado.  */
+           main { 
+            flex-wrap: nowrap;
+            /* gap: 16px; */
+            justify-content: space-between;
+                  
+        }
+
+
+
+    
+      }
 
     </style>
 
@@ -31,7 +120,7 @@
                 magnam harum labore, quis corrupti error ex!</p>
             </article>
 
-            <article id="ColunaB">
+            <article id="colunaB">
                 <h2>Coluna B</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi cum expedita, dignissimos 
                 distinctio rem maiores consequatur doloremque neque nemo illo quam eveniet, asperiores 
